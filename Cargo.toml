@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 authors = ["Gabriele Cabrini <gabrielecabriniii@gmail.com>"]
 license = "MIT"
+repository = "https://github.com/gabrielecabrini/doh"
 
 [dependencies]
 reqwest = { version = "0.12.24", features = ["json"] }
