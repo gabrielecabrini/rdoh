@@ -54,6 +54,7 @@ pub enum RRType {
     AAAA = 28,
     SRV = 33,
     NSEC = 47,
+    DNSKEY = 48,
     HTTPS = 65,
     SPF = 99,
     ANY = 255,
