@@ -1,6 +1,6 @@
 use clap::Parser;
-use doh::resolve;
-use doh::{Query, RRType};
+use rdoh::resolve;
+use rdoh::{Query, RRType};
 use std::process::exit;
 
 #[derive(Parser, Debug)]
