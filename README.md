@@ -11,10 +11,16 @@ A simple Rust command-line DNS-over-HTTPS (DoH) client, similar to `dig`
 - Supports the `DO` (DNSSEC OK) and `CD` (Checking Disabled) flags
 
 ## Installation
-
+From source
 ```bash
 cargo install --path .
 ```
+
+From [crates.io](https://crates.io/crates/rdohhttps://crates.io/crates/rdoh)
+```bash
+cargo install rdoh
+```
+
 Or run directly
 ```
 cargo run -- example.com
@@ -23,20 +29,20 @@ cargo run -- example.com
 ## Usage
 Basic query
 ```
-doh example.com
+rdoh example.com
 ```
 
 Specify a record type
 ```
-doh example.com aaaa
+rdoh example.com aaaa
 ```
 
 Using a custom DoH server (default is [cloudflare.com](https://cloudflare-dns.com/dns-query))
 ```
-doh example.com aaaa https://dns.google/dns-query
+rdoh example.com aaaa https://dns.google/dns-query
 ```
 
 Enable DO / CD flags
 ```
-doh example.com a --do --cd
+rdoh example.com a --do --cd
 ```
