@@ -1,4 +1,4 @@
-# DoH Client
+# DoH Resolver
 
 A simple Rust command-line DNS-over-HTTPS (DoH) client, similar to `dig`
 
