@@ -23,16 +23,16 @@ pub async fn resolve(server: &str, query: &Query) -> Result<QueryResponse, Box<d
                     response.duration = start_instant.elapsed();
                     Ok(response)
                 }
-                Err(e) => Err(format!("JSON decode error: {}\nBody: {}", e, text).into()),
+                Err(e) => Err(format!("decode error: {}\nbody: {}", e, text).into()),
             }
         }
         404 => {
-            Err("Server not found".into())
+            Err("invalid doh dns server".into())
         },
         400..599 => {
             match serde_json::from_str::<ErrorResponse>(&text) {
                 Ok(response) => Err(response.error.into()),
-                Err(e) => Err(format!("ErrorResponse decode error: {}\nBody: {}", e, text).into()),
+                Err(e) => Err(format!("could not parse server error response: {}\nbody: {}", e, text).into()),
             }
         },
         _ => Err(text.into()),
