@@ -16,7 +16,7 @@ From source
 cargo install --path .
 ```
 
-From [crates.io](https://crates.io/crates/rdohhttps://crates.io/crates/rdoh)
+From [crates.io](https://crates.io/crates/rdoh)
 ```bash
 cargo install rdoh
 ```
